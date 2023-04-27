@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        header,aside,main,footer{
+            border:1px solid black;
+        }
+        .page{
+            height: 100%;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                    "header header header header header"
+                    "aside main main main main"
+                    "footer footer footer footer footer"
+            ;
+        }
+        header{
+            padding: 40px;
+            background-color: black;
+            grid-area:header;
+            color: white;
+        }
+        aside{
+            background-color: darkred;
+            grid-area:aside;
+            color: white;
+        }
+        main{
+            background-color: darkblue;
+            grid-area:main;
+            color: white;
+        }
+        footer{
+            background-color: darkgreen;
+            color: white;
+            padding: 40px;
+            grid-area:footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            header
+        </header>
+        <aside>
+            aside
+        </aside>
+        <main>
+            main
+        </main>
+        <footer>
+            footer
+        </footer>
+    </div>
+</body>
+</html>
